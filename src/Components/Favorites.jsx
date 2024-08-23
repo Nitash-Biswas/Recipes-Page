@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import Pagination from "./Pagination";
 
-const RECIPES_PER_PAGE = 2;
+const RECIPES_PER_PAGE = 6;
 function Favorites() {
   const favoriteRecipes =
     JSON.parse(localStorage.getItem("favoriteRecipes")) || [];
