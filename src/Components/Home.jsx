@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <>
-      <div className="bg-base-300 flex flex-col pt-16 px-8 pb-8 h-full">
+      <div className="bg-base-300 flex flex-col pt-16 px-8 pb-8 h-screen ">
         <div className="flex flex-col items-start py-4">
           <p className="text-3xl md:text-5xl mb-4 ">Home</p>
 
@@ -30,12 +30,14 @@ function Home() {
             setCurrentPage={setCurrentPage}
           />
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {loading
-            ? [...Array(6)].map((_, index) => <Loader key={index} />)
-            : recordsThisPage.map((recipe) => (
-                <Card key={recipe.id} recipe={recipe} />
-              ))}
+        <div className="h-screen overflow-y-scroll scrollbar">
+          <div className="flex-grow grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {loading
+              ? [...Array(6)].map((_, index) => <Loader key={index} />)
+              : recordsThisPage.map((recipe) => (
+                  <Card key={recipe.id} recipe={recipe} />
+                ))}
+          </div>
         </div>
       </div>
     </>

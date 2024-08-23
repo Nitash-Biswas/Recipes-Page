@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import Pagination from "./Pagination";
 
-const RECIPES_PER_PAGE = 6;
+const RECIPES_PER_PAGE = 10;
 function Favorites() {
   const favoriteRecipes =
     JSON.parse(localStorage.getItem("favoriteRecipes")) || [];
@@ -16,7 +16,7 @@ function Favorites() {
 
   return (
     <>
-      <div className="bg-base-300 flex flex-col pt-16 px-8 pb-8 h-full">
+      <div className="bg-base-300 flex flex-col pt-16 px-8 pb-8 h-screen">
         <div className="flex flex-col items-start py-4">
           <p className="text-3xl md:text-5xl mb-4 ">Favorites</p>
           <div className={`${recordsThisPage.length ? "" : "hidden"} `}>
