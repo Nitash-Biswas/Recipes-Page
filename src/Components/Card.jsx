@@ -67,7 +67,7 @@ function Card({ recipe }) {
           {recipe.tags.map((tag) => (
             <div
               key={tag}
-              className="bg-primary text-white px-2 py-1 rounded-full text-xs"
+              className="flex justify-center items-center text-center bg-primary text-white px-2 py-1 rounded-full text-xs"
             >
               {tag}
             </div>
